@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Raiz de Segundo-Grado</title>
+</head>
+
+<body>
+    <script>
+        //le pediremos al usuario que ingrese el termino cuadratico.
+        var a = prompt("Ingrese el primer numero");
+        //Luego se le pedira el segundo numero que es el termino lineal.
+        var b = prompt("Ingrese el segundo numero");
+        //Luego se pedira que ingrese el tercer numero que es el termino independiente.
+        var c = prompt("Ingrese el tercer numero ");
+        //el numero b sera multiplicado por -2
+        var solucion1 = -b * -2;
+        //el numero b sera multiplicado al cuadrado.
+        var solucion2 = b * 2;
+        //la operacion1 realizara -4 por la variable "a" y se multiplicara por menos la variable c. 
+        var operacion1 = ((-4 * a) * -c);
+        //la variable 2 multiplicara la raiz de 2 por la variable a
+        var operacion2 = 2 * a;
+        //ingresaremos in div donde se visualizara si la operacion2 da como resultado "o" indicara que no tendra solucion
+        //Si la condicion se cumple, si no se cumple se procedera a seguir la operacion.
+        if (operacion2 == 0) {
+            alert("No hay solucion");
+            //else indicara la segunda opcion si la condicion no se cumplio.
+        } else {
+            //operacion3 mostrara que x tendra la solucion2 de 2 por la variable a mas la operacion 1 de la raiz.
+            var operacion3 = -solucion2 + operacion1;
+            //operacion4 indicara que sacara la raazi cuadrada de la operacion3 con la funcion Math.sqrt.
+            var operacion4 = Math.sqrt(operacion3);
+            //=========================================================================================================
+            //Solucion de x1
+            //=========================================================================================================
+            //Tendra dos signos tanto de mas como de menos para realizar las dos operasiones.
+            //la operacion5 sera que x1 tendra la solucion2 mas la operacion4 de la raiz cuadrada de la operacion3. 
+            var operacion5 = -solucion2 + operacion4;
+            //solucion3 mostrara que x1 con la operacion5 sera dividido por la operacion2
+            var solucion3 = operacion5 / operacion2;
+            //solucion4 resolvera que la solucion3 sera multiplicada por dos y la variable b multiplicara por la solucion3
+            //Donde sacaran un resultado realizando la suma de los dos resultados de la multiplicacion menos la variable c
+            var solucion4 = (((solucion3 * 2)) + (b * solucion3) - c);
+            //Se mostrara una alerta del resultado de la operacion de x1
+            alert("Resultado de x1 es: " + solucion4);
+            //=========================================================================================================
+            //Solucion de x2
+            //=========================================================================================================
+            //la operacion6 sera que x2 tendra la solucion2 menos la operacion4 de la raiz cuadrada de la operacion3. 
+            var operacion6 = solucion2 - operacion4;
+            //solucion5 mostrara que x2 con la operacion6 sera dividido por la operacion2
+            var solucion5 = operacion6 / operacion2;
+            //solucion7 resolvera que la solucion5 sera multiplicada por dos y la variable b multiplicara por la solucion5
+            //Donde sacaran un resultado realizando la resta de los dos resultados de la multiplicacion menos la variable c
+            var solucion7 = (((solucion5 * 2)) - (b * solucion5) - c);
+            //Se mostrara una alerta del resultado de la operacion de x2
+            alert("Resultado de x2 es: " + solucion7);
+        }
+
+    </script>
+</body>
+
+</html>
